@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="codigo.js" defer></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.cdnfonts.com/css/common-pixel" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+
+    <title>Valtroix</title>
+</head>
+<body>
+    <header class="header w3-margin w3-animate-opacity">
+        <div class="logo">
+            <a href="https://www.crackthecode.la/"><img src="logo.png" alt="Logo de Crack the Code"></a>
+        </div>
+        <nav>
+           <ul class="nav-links">
+                <li><a href="">Inicio</a></li>
+                <li><a onclick="">Historia</a></li>
+           </ul>            
+        </nav>
+        <a class="btn" onclick="login();">
+            <button><i class="fa fa-fw fa-user"></i>Login</button>
+        </a>
+    </header>
+
+
+
+    <center>
+        <section class="inicio w3-container w3-animate-zoom" id="infoJuego">
+            <div>
+                <h2 class="font-effect-neon">Escape Valtroix</h2>
+                <p class="descripcion">Reconstruye tu nave y escapa del planeta Valtroix lo antes posible</p>
+                <button onclick="registro();">JUEGA YA</button>
+            </div>
+        </section>
+    </center>
+
+
+
+    <div>
+        <video autoplay muted loop id="myVideo">
+            <source src="asteroides.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <center>
+        <section class="seccion w3-animate-zoom w3-container" id="estudianteForm" style="display:none">
+            <div class="form-box">
+                <form name="jugador" action="">
+                    <h2>Registrarse</h2>
+                    <table cellspacing="10">
+                        <tr>
+                            <td><div class="inputbox">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <input type="" required>
+                                <label for="">Nombre</label>
+                            </div></td>
+                            <td><div class="inputbox">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <input type="" required>
+                                <label for="">Apellidos</label>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="inputbox">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <input type="email" required>
+                                <label for="">Email</label>
+                            </div></td>
+                            <td><div class="inputbox">
+                                <ion-icon name="lock-closed-outline"></ion-icon>
+                                <input type="password" required>
+                                <label for="">Contraseña</label>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="inputbox">
+                                <ion-icon name="mail-outline"></ion-icon>
+                                <input type="" required>
+                                <label for="">Usuario</label>
+                            </div></td>
+                            <td><div class="inputbox">
+                                <input class="calendarioNac" type="date" required>
+                                <label for="">Fecha de nacimiento</label>
+                            </div></td>
+                        </tr>
+                        <tr>
+                            <td><div class="inputbox" style="border-bottom: none;">
+                                <center>
+                                <select name="sexo" class="cajaSelect" form="sexoform" required>
+                                    <option class="opcion" disabled selected>Sexo:</option>
+                                    <option value="Hombre" class="opcion">Hombre</option>
+                                    <option value="Mujer" class="opcion">Mujer</option>
+                                    <option value="Otro" class="opcion">Otro</option>
+                                </select>
+                            </div></center></td>
+                            <td><div class="inputbox" style="border-bottom: none;">
+                                <center>
+                                <select name="país" class="cajaSelect" form="paísform" id="PaisBox" required>
+                                    <option class="opcion" disabled selected>Selecciona país:</option>
+                                    <option value="Argentina" class="opcion">Argentina</option>
+                                    <option value="Bolivia" class="opcion">Bolivia</option>
+                                    <option value="Chile" class="opcion">Chile</option>
+                                    <option value="Colombia" class="opcion">Colombia</option>
+                                    <option value="Costa Rica" class="opcion">Costa Rica</option>
+                                    <option value="Cuba" class="opcion">Cuba</option>
+                                    <option value="Ecuador" class="opcion">Ecuador</option>
+                                    <option value="El Salvador" class="opcion">El Salvador</option>
+                                    <option value="Guatemala" class="opcion">Guatemala</option>
+                                    <option value="Honduras" class="opcion">Honduras</option>
+                                    <option value="México" class="opcion">México</option>
+                                    <option value="Nicaragua" class="opcion">Nicaragua</option>
+                                    <option value="Panamá" class="opcion">Panamá</option>
+                                    <option value="Paraguay" class="opcion">Paraguay</option>
+                                    <option value="Perú" class="opcion">Perú</option>
+                                    <option value="República Dominicana" class="opcion">República Dominicana</option>
+                                    <option value="Uruguay" class="opcion">Uruguay</option>
+                                    <option value="Venezuela" class="opcion">Venezuela</option>
+                                </select>
+                            </div></center></td>
+                        </tr>
+                    </table>
+                    <button type="submit"  onclick="mostrarTutor();" class="botonCont">Continuar</button>
+                </form>
+            </div>
+        </section>
+    </center>    
+    <center>
+        <section class="seccion w3-animate-zoom w3-container" id="tutorForm" style="display:none">
+            <div class="tut-form-box">
+                <div class="form-value">
+                    <form action="">
+                        <h2>Registrarse</h2>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="text" required>
+                            <label for="">Nombre del tutor:</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="email" required>
+                            <label for="">Correo del tutor:</label>
+                        </div>
+                        <div class="inputbox" style="border-bottom: none;">
+                            <select name="país" class="cajaSelect" form="parentescoForm" required>
+                                <option class="opcion" disabled selected>Parentesco:</option>
+                                <option value="Padre" class="opcion">Padre</option>
+                                <option value="Madre" class="opcion">Madre</option>
+                                <option value="Otro" class="opcion">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <button class="botonCont">Continuar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </center>
+    <center>
+        <section class="seccion w3-animate-zoom w3-container" id="loginBox" style="display:none">
+            <div class="tut-form-box">
+                <div class="form-value">
+                    <form action="">
+                        <h2>Login</h2>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="text" required>
+                            <label for="">Usuario:</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" required>
+                            <label for="">Contraseña</label>
+                        </div>
+                        
+                        <button class="botonCont">Login</button>
+                        <div class="register">
+                            <p>¿No tienes cuenta? <a onclick="registro()">Regístrate</a></p>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </section>
+    </center>
+
+    <!--Prueba de forms responsivo-->
+
+    <center>
+        <section class="seccion w3-animate-zoom w3-container" id="estudianteFormPrueba" style="display: none;">
+            <div class="form-box w3-container scroll">
+                <form class="prueba">
+                    <div class="titulo"><h2>Registrarse</h2></div>
+                    <div class="datosUsuario">
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="" required>
+                            <label for="">Nombre</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="" required>
+                            <label for="">Apellidos</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="email" required>
+                            <label for="">Email</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" required>
+                            <label for="">Contraseña</label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="" required>
+                            <label for="">Usuario</label>
+                        </div>
+                        <div class="inputbox">
+                            <input class="calendarioNac" type="date" required>
+                            <label for="">Fecha de nacimiento</label>
+                        </div>
+                        <div class="inputbox" style="border-bottom: none;">
+                            <select name="sexo" class="cajaSelect" form="sexoform" required>
+                                <option class="opcion" disabled selected>Sexo:</option>
+                                <option value="Hombre" class="opcion">Hombre</option>
+                                <option value="Mujer" class="opcion">Mujer</option>
+                                <option value="Otro" class="opcion">Otro</option>
+                            </select>
+                        </div>
+                        <div class="inputbox" style="border-bottom: none;">
+                            <select name="país" class="cajaSelect" form="paísform" required>
+                                <option class="opcion" disabled selected>Selecciona país:</option>
+                                <option value="México" class="opcion">México</option>
+                                <option value="Colombia" class="opcion">Colombia</option>
+                                <option value="Perú" class="opcion">Perú</option>
+                                <option value="Argentina" class="opcion">Argentina</option>
+                            </select>
+                        </div>
+                        <button onclick="mostrarTutor();" class="botonCont">Continuar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </center>    
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
